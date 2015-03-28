@@ -1,0 +1,34 @@
+<html>
+{% load staticfiles %}
+
+  <head>
+
+    <title>{% block title %}15-112 Puzzlehunt{% endblock %}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Loading CSS libraries -->
+    <link href="{% static 'css/libs/jquery-ui.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/libs/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/libs/bootstrap-theme.min.css' %}" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+
+    {% block css %}{% endblock %}
+
+  </head>
+
+  <body>
+
+    {% block body %}{% endblock %}
+
+    <!-- Loading Javascript libraries -->
+    <script src="{% static 'js/libs/jquery.js' %}"></script>
+    <script src="{% static 'js/libs/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'js/libs/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/headernav.js' %}"></script>
+
+    {% block js %}{% endblock %}
+  </body>
+
+</html>
