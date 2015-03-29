@@ -9,5 +9,13 @@ $(document).ready(function() {
       return;
     }
     console.log(post_data);
+    $.ajax({
+      type: 'POST',
+      url: "/register",
+      data: post_data,
+      success: function() {
+        window.location.href = "/";
+      }
+    })
   });
 });

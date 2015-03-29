@@ -39,6 +39,9 @@ class TeamData(models.Model):
 class Puzzle(models.Model):
   answer = models.CharField(default="", max_length=100)
   puzzle_unlocked = models.BooleanField(default=False)
+  description = models.TextField(default="")
+  name = models.CharField(default="", max_length=100)
+  number = models.IntegerField(default=0)
 
   hint1 = models.TextField(default="")
   hint2 = models.TextField(default="")
