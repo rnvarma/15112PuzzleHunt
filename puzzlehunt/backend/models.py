@@ -29,7 +29,6 @@ class TeamData(models.Model):
   puzzle4_hintsused = models.IntegerField(default=0)
   puzzle5_hintsused = models.IntegerField(default=0)
 
-
 class Puzzle(models.Model):
   answer = models.CharField(default="", max_length=100)
   puzzle_unlocked = models.BooleanField(default=False)
@@ -45,6 +44,4 @@ class Puzzle(models.Model):
   hint3_unlocked = models.BooleanField(default=False)
   hint4_unlocked = models.BooleanField(default=False)
   hint5_unlocked = models.BooleanField(default=False)
-
-
 
