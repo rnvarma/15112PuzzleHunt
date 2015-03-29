@@ -11,5 +11,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.HomePage.as_view()),
     url(r'^register', views.RegistrationPage.as_view()),
-    url(r'^puzzles', views.PuzzlePage.as_view())
+    url(r'^puzzles', views.PuzzlePage.as_view()),
+    url(r'^login', views.LoginPage.as_view()),
+    url(r'^executelogin', views.login_user),
+    url(r'^executelogout', views.logout_user)
 )
