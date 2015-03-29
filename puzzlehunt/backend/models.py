@@ -5,6 +5,13 @@ class TeamData(models.Model):
   user = models.OneToOneField(settings.AUTH_USER_MODEL)
   levels_solved = models.CharField(default="", max_length=100)
 
+  member1 = models.CharField(default="", max_length=100)
+  member2 = models.CharField(default="", max_length=100)
+  member3 = models.CharField(default="", max_length=100)
+  member4 = models.CharField(default="", max_length=100)
+
+  team_name = models.CharField(default="", max_length=100)
+
   puzzle1_score = models.IntegerField(default=0)
   puzzle2_score = models.IntegerField(default=0)
   puzzle3_score = models.IntegerField(default=0)
