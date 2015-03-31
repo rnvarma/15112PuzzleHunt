@@ -31,6 +31,12 @@ class PuzzlePage(View):
 
   def get(self,request):
     context = {}
-    puzzles = Puzzle.objects.all()
+    puzzles = []
+    for puzzle in Puzzle.objects.all():
+        obj = puzzle.__dict__
+        puzzles.append(obj)
+        
+
+    context["puzzles"] = puzzles
     
     return render(request, 'puzzle.html', context)
