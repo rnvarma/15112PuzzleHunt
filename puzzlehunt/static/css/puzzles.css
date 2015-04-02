@@ -1,25 +1,28 @@
 .puzzletile {
   color:black; 
-  text-align:center;
   position:relative;
-  border: 2px solid #a1a1a1;
-  border-radius: 25px;
+  border: 2px solid white;
+  box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.71);
+  -moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.71);
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.71);
   height: 200px;
   margin: -3px;
 }
 
 .tile-title {
-  margin-top: 55px;
-  font-size: 155%;
-  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 10px #003399 , 0 0 10px #003399 , 0 0 10px #003399 , 0 0 10px #003399;
-  font-weight: 800;
-
+  border-bottom: 60px solid blue;
+  border-right: 60px solid transparent;
+  width: 270px;
+  margin-top: 40px;
 }
 
-.vert-align {
-  display: inline-block;
-  vertical-align:middle;
-  float: none;
+.tile-text {
+  float: left;
+  font-weight: 800;
+  color: white;
+  font-size: 200%;
+  margin-top: 50px;
+  margin-left: 15px;
 }
 
 .link-spanner{
@@ -37,13 +40,13 @@
 
 .puzzletile:hover {
   cursor: pointer;
-  -webkit-box-shadow:0 0 20px #003399; 
-  -moz-box-shadow: 0 0 20px #003399; 
-  box-shadow:0 0 20px blue;
+  box-shadow: 0px 0px 10px 4px #003399;
+  -moz-box-shadow: 0px 0px 10px 4px #003399;
+  -webkit-box-shadow: 0px 0px 10px 4px #003399;
 }
 
 .tile-col {
   margin-right: -8px;
   margin-left: -8px;
-  padding-top: 25px;
+  padding-top: 30px;
 }

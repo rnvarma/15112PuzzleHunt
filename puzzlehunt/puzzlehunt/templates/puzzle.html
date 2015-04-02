@@ -8,13 +8,14 @@
 {% block body %}
 
 <div class="row">
-    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
         <div class="row">
             {% for puzzle in puzzles %}
                 <a href="/puzzles/{{ puzzle.number }}">
-                    <div class="col-md-4 col-sm-6 col-xs-12 vert-align tile-col">
+                    <div class="col-md-12 tile-col">
                         <div class="puzzletile" style="background-image: url({{ puzzle.image_link }}); background-size: cover;">
-                            <div class="tile-title">{{ puzzle.name }}</div>
+                            <div class="tile-text">{{ puzzle.name }}</div>
+                            <div class="tile-title"></div>
                         </div>
                     </div>
                 </a>

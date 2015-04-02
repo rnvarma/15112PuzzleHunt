@@ -80,6 +80,17 @@ class PuzzlePage(View):
     context["puzzles"] = puzzles
     return render(request, 'puzzle.html', context)
 
+class IndividualPuzzlePage(View):
+
+  def get(self, request, p_id):
+    p_id = int(p_id)
+    if p_id > 5:
+      return HttpResponseRedirect("/puzzles")
+    context = {}
+    puzzle = Puzzle.objects.get(number = p_id)
+    context["puzzle"] = puzzle.__dict__
+    return render(request, 'puzzles/%d.html' % p_id, context)
+
 class LoginPage(View):
 
   def get(self, request):
