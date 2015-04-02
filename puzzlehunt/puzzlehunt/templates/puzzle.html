@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css %}
+    <link href="{% static 'css/puzzles.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+        <div class="row">
+            {% for puzzle in puzzles %}
+            <div class="col-md-4 col-sm-6 col-xs-12 puzzletile vert-align">
+                <!--<span class="vert-align">-->
+                <div class="tile-title">{{ puzzle.name }}</div>
+                <a href="https://www.google.com">
+                    <span class="link-spanner"></span>
+                </a>
+
+                {{ puzzle.description }} <br>
+                {{ puzzle.answer }}
+                <!--</span>-->
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock  %}
