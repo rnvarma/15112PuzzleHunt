@@ -4,12 +4,15 @@
   position:relative;
   border: 2px solid #a1a1a1;
   border-radius: 25px;
-  height:150px;
-
+  height: 200px;
+  margin: -3px;
 }
 
 .tile-title {
-  font-size: 150%;
+  margin-top: 55px;
+  font-size: 155%;
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 10px #003399 , 0 0 10px #003399 , 0 0 10px #003399 , 0 0 10px #003399;
+  font-weight: 800;
 
 }
 
@@ -33,5 +36,14 @@
 }  
 
 .puzzletile:hover {
-  background-color:black;
+  cursor: pointer;
+  -webkit-box-shadow:0 0 20px #003399; 
+  -moz-box-shadow: 0 0 20px #003399; 
+  box-shadow:0 0 20px blue;
+}
+
+.tile-col {
+  margin-right: -8px;
+  margin-left: -8px;
+  padding-top: 25px;
 }

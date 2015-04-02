@@ -42,6 +42,7 @@ class Puzzle(models.Model):
   description = models.TextField(default="")
   name = models.CharField(default="", max_length=100)
   number = models.IntegerField(default=0)
+  image_link = models.CharField(default="", max_length=300)
 
   hint1 = models.TextField(default="")
   hint2 = models.TextField(default="")
@@ -54,4 +55,7 @@ class Puzzle(models.Model):
   hint3_unlocked = models.BooleanField(default=False)
   hint4_unlocked = models.BooleanField(default=False)
   hint5_unlocked = models.BooleanField(default=False)
+
+  def __unicode__(self):
+    return self.name
 
