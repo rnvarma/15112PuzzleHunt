@@ -74,7 +74,7 @@ class PuzzlePage(View):
   def get(self,request):
     context = {}
     puzzles = []
-    for puzzle in Puzzle.objects.all():
+    for puzzle in Puzzle.objects.all().order_by("number"):
         obj = puzzle.__dict__
         puzzles.append(obj)
     context["puzzles"] = puzzles

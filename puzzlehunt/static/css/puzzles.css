@@ -12,7 +12,7 @@
 .tile-title {
   border-bottom: 60px solid blue;
   border-right: 60px solid transparent;
-  width: 270px;
+  width: 340px;
   margin-top: 40px;
 }
 
@@ -20,7 +20,7 @@
   float: left;
   font-weight: 800;
   color: white;
-  font-size: 200%;
+  font-size: 175%;
   margin-top: 50px;
   margin-left: 15px;
 }
@@ -49,4 +49,8 @@
   margin-right: -8px;
   margin-left: -8px;
   padding-top: 30px;
+}
+
+.main-row {
+  margin-bottom: 50px;
 }
