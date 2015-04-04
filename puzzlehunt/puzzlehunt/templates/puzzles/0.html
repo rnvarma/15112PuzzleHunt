@@ -1,1 +1,138 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block body %}
+
+<div class="row">
+	<h1 class="text-center">Puzzle 0</h1>
+	<h2 id="part-title" class="text-center">Part 1</h2>
+	</br>
+
+	<!-- QUESTION 1 -->
+
+	<div id="question-1" class="col-md-offset-4 col-md-4 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
+		<p id="question-1-text" class="text-center">The only way forward is the wrong way.</p>
+
+		<div class="row">
+			<div class="text-center">
+				<form id="question-1-form">
+					<div class="row">
+					  <div class="form-group col-md-offset-2 col-md-8 col-sm-offset-4 col-sm-4 col-xs-offset-2 col-xs-8">
+					    <label for="answerInput" class="sr-only">Answer Input</label>
+					    <input type="text" class="form-control text-center" id="answerInput-1" placeholder="Enter answer">
+					  </div>
+					</div>
+				  <div>
+				  	<button id="submit-1" type="button" class="btn btn-primary">Submit</button>
+				  	<button type="button" class="btn btn-info">Hint</button>
+				  </div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="continue-1" class="hidden col-md-offset-4 col-md-4 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
+		<p class="text-center">Each question is worth points.  When you get a question wrong, like you just did, you will lose points.</p>
+		<p class="text-center">But don't worry, that one doesn't count.</p>
+		<p class="text-center">Puzzle 0 is a safe place.</p>
+		<div class="row">
+			<div class="text-center">
+				<form>
+				  <div>
+				  	<button id="continue-btn-1" type="button" class="btn btn-warning">Continue</button>
+				  </div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- QUESTION 2 -->
+
+	<div id="question-2" class="hidden col-md-offset-4 col-md-4 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
+
+		<p id="question-2-text" class="text-center">Sometimes you can’t do it on your own.</p>
+
+		<div class="row">
+			<div class="text-center">
+				<form id="question-2-form">
+					<div class="row">
+					  <div class="form-group col-md-offset-2 col-md-8 col-sm-offset-4 col-sm-4 col-xs-offset-2 col-xs-8">
+					    <label for="answerInput" class="sr-only">Answer Input</label>
+					    <input type="text" class="form-control text-center" id="answerInput-2" placeholder="Enter answer">
+					  </div>
+					</div>
+				  <div>
+				  	<button id="submit-2" type="button" class="btn btn-primary">Submit</button>
+				  	<button type="button" class="btn btn-info">Hint</button>
+				  </div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="continue-2" class="hidden col-md-offset-4 col-md-4 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
+		<p class="text-center">Asking for help is an important skill in life.</p>
+		<p class="text-center">Ask for a hint and you will receive help.</p>
+		<p class="text-center">However, be aware that hints will also cost you points. So use them only when you get stuck!</p>
+		<p class="text-center">Also, hints will automatically be unlocked at preset times.</p>
+		<div class="row">
+			<div class="text-center">
+				<form>
+				  <div>
+				  	<button id="continue-btn-2" type="button" class="btn btn-warning">Continue</button>
+				  </div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- QUESTION 3 -->
+
+	<div id="question-3" class="hidden col-md-offset-4 col-md-4 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
+
+		<p id="question-3-text" class="text-center">How many roads must a man walk down?</p>
+
+		<div class="row">
+			<div class="text-center">
+				<form id="question-3-form">
+					<div class="row">
+					  <div class="form-group col-md-offset-2 col-md-8 col-sm-offset-4 col-sm-4 col-xs-offset-2 col-xs-8">
+					    <label for="answerInput" class="sr-only">Answer Input</label>
+					    <input type="text" class="form-control text-center" id="answerInput-3" placeholder="Enter answer">
+					  </div>
+					</div>
+				  <div>
+				  	<button id="submit-3" type="button" class="btn btn-primary">Submit</button>
+				  	<button type="button" class="btn btn-info">Hint</button>
+				  </div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="continue-3" class="hidden col-md-offset-4 col-md-4 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
+		<p class="text-center">Google searching is also an important skill in life.</p>
+		<p class="text-center">Ask Jeeves and you will receive help.</p>
+		<p class="text-center">Now you are equipped with the essential skills for puzzlehunting.</p>
+		<p class="text-center">Puzzle 0 bids you farewell. It's been nice.</p>
+		<div class="row">
+			<div class="text-center">
+				<form>
+				  <div>
+				  	<button id="continue-btn-3" type="button" class="btn btn-warning">Next Question</button>
+				  </div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/puzzle0.js' %}"></script>
+{% endblock %}
+
