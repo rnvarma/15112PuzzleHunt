@@ -2,6 +2,7 @@
 {% load staticfiles %}
 
 
+
 {% block body %}
 
 <div class="row">
@@ -12,7 +13,7 @@
 	<!-- QUESTION 1 -->
 
 	<div id="question-1" class="col-md-offset-4 col-md-4 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
-		<p id="question-1-text" class="text-center">The only way forward is the wrong way.</p>
+		<p id="question-1-text" class="text-center">The only right way is the wrong way.</p>
 
 		<div class="row">
 			<div class="text-center">
@@ -25,7 +26,7 @@
 					</div>
 				  <div>
 				  	<button id="submit-1" type="button" class="btn btn-primary">Submit</button>
-				  	<button type="button" class="btn btn-info">Hint</button>
+				  	<button id="hint-1" type="button" class="btn btn-info">Hint</button>
 				  </div>
 				</form>
 			</div>
@@ -64,7 +65,7 @@
 					</div>
 				  <div>
 				  	<button id="submit-2" type="button" class="btn btn-primary">Submit</button>
-				  	<button type="button" class="btn btn-info">Hint</button>
+				  	<button id="hint-2" type="button" class="btn btn-info">Hint</button>
 				  </div>
 				</form>
 			</div>
@@ -104,7 +105,7 @@
 					</div>
 				  <div>
 				  	<button id="submit-3" type="button" class="btn btn-primary">Submit</button>
-				  	<button type="button" class="btn btn-info">Hint</button>
+				  	<button id="hint-3" type="button" class="btn btn-info">Hint</button>
 				  </div>
 				</form>
 			</div>
@@ -133,6 +134,7 @@
 
 
 {% block js %}
+<script src="{% static 'js/alerts.js' %}"></script>
 <script src="{% static 'js/puzzle0.js' %}"></script>
 {% endblock %}
 
