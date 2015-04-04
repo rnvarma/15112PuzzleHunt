@@ -1,1 +1,87 @@
 {% extends 'base.html' %}
+
+{% load staticfiles %}
+
+
+{% block body %}
+
+<div class="container">
+	<div class="row">
+		<h2 id="part-title" class="text-center">Journeying Over Code</h2>		
+	</div>
+
+	<br>
+
+	<div class="row">
+		<div class="text-center">
+			<pre># journey 1 - a logical journey
+# your goal: make this return True
+
+def secretPlaces(a):
+	assert(len(a) == 4)
+	assert(len(a[0]) == 3)
+	assert(a[0][0] == 'HL')
+	assert(a[0][2] == 'PH')
+	assert(a[1][2] == 'HH')
+	assert(a[2][0] == 'grass')
+	wow = [p[0] for p in a[3]]
+	assert(wow[0]+wow[1]+wow[2] == "gGN")
+	# this checks all of a in a secret function
+	assert (check_rest(a))
+	return True
+
+print secretPlaces(a)
+</pre>
+		</div>
+	</div>
+
+	<br>
+
+	<div class="row">
+		<p class="text-center">Have this bottom box pop up only after part 1 is answered.  Also the answer should be evaluated as a python expression, which I'm assuming can be done server-side, hopefully not with eval...</p>
+		<div class="text-center">
+			<pre># journey 2 - a physical journey
+# complete the journey, then make this return True
+def secretWay(a, r):
+	assert(secretPlaces(a))
+	# these comments are essential to your success,
+	#   and not just for style points
+	path = [(3, 1, 4837), # this is a legit place.
+			(3, 1, 4401),
+			# hint: no doors need opening between here
+			(3, 1, 4101),
+			# hint: there is a sign close to here
+			#   that is not to be counted (by 4306)
+			(3, 2, 4306),
+			(2, 2, 4202),
+			(2, 2, 5202),
+			(2, 2, 5336),
+			(2, 2, 5421),
+			# hint: use the CLOSEST path between here
+			(2, 2, 7427),
+			(2, 1, 2315),
+			(2, 1, 2271)] # this is also legit.
+	# path = shortest possible path - also, no elevators!
+	print "walk from",
+	for (i, j, rm) in path:
+		print a[i][j], rm, "to",
+	print "the magic r"
+	# these signs only "count" if you cross the imaginary 
+	#   extension of the 2D plane that the sign makes 
+	#   roughly perpendicularly, 
+	#   and it's within approx. 10 feet of you
+	#   and no double counting!
+	# note: the nearest "exit" may be behind you
+	green = path.count("greenExitSigns")
+	red = path.count("redExitSigns")
+	# last comment: if sign is debatable, it don't count
+	return almost_equals(r, float(green)/float(red))
+
+secretWay(a, r)
+</pre>
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}

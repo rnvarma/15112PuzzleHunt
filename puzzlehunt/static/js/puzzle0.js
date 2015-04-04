@@ -15,6 +15,13 @@ $("#submit-1").click(function(event) {
 	};
 });
 
+$("#answerInput-1").keypress(function(e) {
+  if(e.which == 13) {
+    $("#submit-1").trigger("click");
+    e.preventDefault();
+  }
+});
+
 $("#hint-1").click(function(event) {
 	createAlert("If anything wrong is right, then type anything, "+
 		"without fear of being wrong, and you'll be right.");
@@ -41,6 +48,13 @@ $("#submit-2").click(function(event) {
 	}
 });
 
+$("#answerInput-2").keypress(function(e) {
+  if(e.which == 13) {
+    $("#submit-2").trigger("click");
+    e.preventDefault();
+  }
+});
+
 $("#hint-2").click(function(event) {
 	createAlert("Enter \"I used the hint\".");
 });
@@ -64,6 +78,13 @@ $("#submit-3").click(function(event) {
 	else {
 		flashRed();
 	}
+});
+
+$("#answerInput-3").keypress(function(e) {
+  if(e.which == 13) {
+    $("#submit-3").trigger("click");
+    e.preventDefault();
+  }
 });
 
 $("#hint-3").click(function(event) {
